@@ -32,3 +32,60 @@ html {
 body {
   background-color: #eee;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /*top, left e right = 0 faz com que o header fique no topo e ocupe toda a largura*/
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8%;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--preto);
+}
+
+.header .logo i {
+  color: var(--laranja);
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  margin: 0 1rem;
+  color: var(--preto);
+}
+
+.header .navbar a:hover {
+  color: var(--laranja);
+}
+
+.header .icons div {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 0.5rem;
+  background-color: #eee;
+  color: var(--preto);
+  font-size: 2rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.header .icons div:hover {
+  background-color: var(--laranja);
+  color: #fff;
+}
+
+#menu-btn {
+  display: none;
+}
