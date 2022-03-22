@@ -89,3 +89,44 @@ body {
 #menu-btn {
   display: none;
 }
+
+.header .form-busca {
+  position: absolute;
+  top: 110%;
+  /* right: 2rem; */
+  right: -110%; /*para esconder o form de busca. Será exibido quando o ícone de busca for clicado (busca-btn)*/
+  width: 50rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.header .form-busca.form-busca-ativo {
+  right: 2rem;
+  transition: 0.3s linear;
+}
+
+.header .form-busca input {
+  height: 100%;
+  width: 100%; /*width 100% joga lupa para o canto direito*/
+  background: none;
+  text-transform: none;
+  font-size: 1.6rem;
+  color: var(--preto);
+  padding: 0 1.5rem;
+}
+
+.header .form-busca label {
+  font-size: 2.2rem;
+  padding-right: 1.5rem;
+  color: var(--preto);
+  cursor: pointer;
+}
+
+.header .form-busca label:hover {
+  color: var(--laranja);
+}
