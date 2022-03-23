@@ -33,6 +33,22 @@ body {
   background-color: #eee;
 }
 
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid var(--preto);
+  color: var(--cinza);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--laranja);
+  color: #fff;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -129,4 +145,82 @@ body {
 
 .header .form-busca label:hover {
   color: var(--laranja);
+}
+
+/*Carrinho de compras*/
+.header .carrinho-compras {
+  position: absolute;
+  top: 110%;
+  right: -110%; /*Inicialmente com 2rem para montarmos o carrinho. Depois, -110% para esconder o carrinho e o exibirmos ao clicramos no botão na nav*/
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  width: 35rem;
+  background: #fff;
+}
+
+.header .carrinho-compras.ativo {
+  right: 2rem;
+  transition: 0.3s linear;
+}
+
+.header .carrinho-compras .box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.header .carrinho-compras .box img {
+  height: 10rem;
+  border-radius: 10px;
+}
+
+.header .carrinho-compras .box .fa-trash {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  cursor: pointer;
+  color: var(--cinza);
+  transform: translateY(-50%);
+  /* margin-left: 1rem; */
+}
+
+.header .carrinho-compras .box .fa-trash:hover {
+  color: var(--laranja);
+}
+
+.header .carrinho-compras .box .conteudo {
+  /* margin-right: 3rem; */
+  display: flex;
+  flex-direction: column;
+}
+
+.header .carrinho-compras .box .conteudo h3 {
+  color: var(--preto);
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.header .carrinho-compras .box .conteudo span {
+  color: var(--cinza);
+  font-size: 1.6rem;
+}
+
+/* .header .carrinho-compras .box .conteudo .quantidade {
+  padding-left: 1rem;
+} */
+
+.header .carrinho-compras .total {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--preto);
+}
+
+.header .carrinho-compras .btn {
+  display: block; /*Usa toda a largura*/
+  text-align: center;
+  margin: 1rem;
 }
